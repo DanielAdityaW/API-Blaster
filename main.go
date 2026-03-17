@@ -19,11 +19,13 @@ import (
 func main() {
 	setupLogger()
 
-	csvPath := prompt("CSV file path: ")
-	jsonPath := prompt("JSON template path: ")
-	urlPath := prompt("API URL txt path: ")
+	csvName := prompt("CSV file name (data/csv): ")
+	jsonName := prompt("JSON template name (data/json): ")
+	url := prompt("API URL: ")
 
-	url := readFile(urlPath)
+	csvPath := filepath.Join("data", "csv", csvName)
+	jsonPath := filepath.Join("data", "json", jsonName)
+
 	template := readFile(jsonPath)
 	records := readCSV(csvPath)
 
@@ -34,7 +36,7 @@ func main() {
 		bodies = append(bodies, "[\n"+body+"\n]")
 	}
 
-	// preview gabungan
+	// preview
 	preview := strings.Join(bodies, "\n\n")
 
 	fileName := "preview_all.txt"
@@ -60,7 +62,7 @@ func main() {
 
 	for i, row := range records {
 
-		log.Println("=================================")
+		log.Println("====================================")
 		log.Println("Sending Row", i+1)
 		log.Println("Time:", time.Now().Format("15:04:05"))
 
@@ -164,7 +166,7 @@ func sendPOST(url string, body string, filePath string) bool {
 			return false
 		}
 
-		part, err := writer.CreateFormFile("files", filepath.Base(filePath))
+		part, err := writer.CreateFormFile("mediafile", filepath.Base(filePath))
 		if err != nil {
 			log.Println(err)
 			file.Close()
@@ -243,9 +245,17 @@ func prompt(label string) string {
 
 func setupLogger() {
 	timestamp := time.Now().Format("2006-01-02_15-04-05")
-	fileName := "log_pengiriman_" + timestamp + ".txt"
+	fileName := "log_send_" + timestamp + ".txt"
 
-	logFile, err := os.Create(fileName)
+	logDir := "logs"
+	filePath := filepath.Join(logDir, fileName)
+
+	err := os.MkdirAll(logDir, os.ModePerm)
+	if err != nil {
+		log.Fatal("Cannot create log directory:", err)
+	}
+
+	logFile, err := os.Create(filePath)
 	if err != nil {
 		log.Fatal("Cannot create log file:", err)
 	}
@@ -253,7 +263,7 @@ func setupLogger() {
 	multi := io.MultiWriter(os.Stdout, logFile)
 
 	log.SetOutput(multi)
-	log.Println("Log file:", fileName)
+	log.Println("Log file:", filePath)
 }
 
 func resolvePath(p string) string {
