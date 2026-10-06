@@ -1,0 +1,139 @@
+[
+{
+        "customerName": "user1",
+        "phoneNumber": "1234567",
+        "sources": "xxxxxx",
+        "email": "email@gmail.com",
+        "rule": "xxxxxx",
+        "notificationList": [
+            {
+                "notificationType": "xxxxxx",
+                "whatsApp": {
+                    "templateName": "xxxxxx",
+                    "sender": "xxxxxx",
+                    "language": "xxxxxx",
+                    "parameter": {
+                        "parameter_1": "test1",
+                        "parameter_2": "test2",
+                        "parameter_3": "test3",
+                        "parameter_4": "test4",
+                        "parameter_5": "test5",
+                        "parameter_6": "test6",
+                        "parameter_7": "test7",
+                        "parameter_8": "test8",
+                        "parameter_9": "test9",
+                        "parameter_10": "test10",
+                        "parameter_11": "test11",
+                        "parameter_12": "test12",
+                        "attachmentName": "blank1.pdf"
+                    }
+                }
+            }
+        ]
+    }
+]
+
+[
+{
+        "customerName": "user1",
+        "phoneNumber": "1234567",
+        "sources": "xxxxxx",
+        "email": "xxxxxx@xxxxxx.com",
+        "rule": "xxxxxx",
+        "notificationList": [
+            {
+                "notificationType": "xxxxxx",
+                "whatsApp": {
+                    "templateName": "xxxxxx",
+                    "sender": "xxxxxx",
+                    "language": "xxxxxx",
+                    "parameter": {
+                        "parameter_1": "test11",
+                        "parameter_2": "test12",
+                        "parameter_3": "test13",
+                        "parameter_4": "test14",
+                        "parameter_5": "test15",
+                        "parameter_6": "test16",
+                        "parameter_7": "test17",
+                        "parameter_8": "test18",
+                        "parameter_9": "test19",
+                        "parameter_10": "test20",
+                        "parameter_11": "test21",
+                        "parameter_12": "test22",
+                        "attachmentName": "blank2.pdf"
+                    }
+                }
+            }
+        ]
+    }
+]
+
+[
+{
+        "customerName": "xxxxxx",
+        "phoneNumber": "xxxxxx",
+        "sources": "xxxxxx",
+        "email": "xxxxxx@xxxxxx.com",
+        "rule": "xxxxxx",
+        "notificationList": [
+            {
+                "notificationType": "xxxxxx",
+                "whatsApp": {
+                    "templateName": "xxxxxx",
+                    "sender": "xxxxxx",
+                    "language": "xxxxxx",
+                    "parameter": {
+                        "parameter_1": "test21",
+                        "parameter_2": "test22",
+                        "parameter_3": "test23",
+                        "parameter_4": "test24",
+                        "parameter_5": "test25",
+                        "parameter_6": "test26",
+                        "parameter_7": "test27",
+                        "parameter_8": "test28",
+                        "parameter_9": "test29",
+                        "parameter_10": "test30",
+                        "parameter_11": "test31",
+                        "parameter_12": "test32",
+                        "attachmentName": "blank3.pdf"
+                    }
+                }
+            }
+        ]
+    }
+]
+
+[
+{
+        "customerName": "xxxxxx",
+        "phoneNumber": "xxxxxx",
+        "sources": "xxxxxx",
+        "email": "xxxxxx@xxxxxx.com",
+        "rule": "xxxxxx",
+        "notificationList": [
+            {
+                "notificationType": "xxxxxx",
+                "whatsApp": {
+                    "templateName": "xxxxxx",
+                    "sender": "xxxxxx",
+                    "language": "xxxxxx",
+                    "parameter": {
+                        "parameter_1": "test31",
+                        "parameter_2": "test32",
+                        "parameter_3": "test33",
+                        "parameter_4": "test34",
+                        "parameter_5": "test35",
+                        "parameter_6": "test36",
+                        "parameter_7": "test37",
+                        "parameter_8": "test38",
+                        "parameter_9": "test39",
+                        "parameter_10": "test40",
+                        "parameter_11": "test41",
+                        "parameter_12": "test42",
+                        "attachmentName": "blank4.pdf"
+                    }
+                }
+            }
+        ]
+    }
+]
